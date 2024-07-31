@@ -24,7 +24,7 @@
 //STEP 1
 //a. Use a variable named board to represent the state of the squares on the board.
 let board; //represents the state of the squares on the board
-let turn; // track whonse turn it is
+let turn; // track whose turn it is
 let winner; // represents if anyone has won yet
 let tie; //represents if the game has ended in a tie
 
