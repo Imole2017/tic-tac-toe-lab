@@ -50,18 +50,18 @@ console.log(messageEl);
 //a. Create a function called init.
 const init = () => { // this is the intial setting for the 9 squares. ; MDN source
     // b. Call the init function when the app loads.
-
+  
 //    c. Set the board variable to an array containing nine empty strings ('') representing empty squares.
 //d. Set the turn to X - this will represent player X.
 // e. Set the winner to false.
 // f. Set tie to false.
-    board = ['', '', '', '', '', '', '', '', '',];
+    board = ['X', 'O', '', '', '', '', '', '', '',]; //9 squares 
     turn = 'X';
     winner = false;
     tie = false;
     render();
   
-console.log(init);
+console.log('hello');
 };
 init();
 
@@ -76,25 +76,24 @@ function render() {
 
 };
 
-// function updateBoard() {
 
-// };
 
 // c. In the updateBoard function, loop over board and for each element:
 
 const updateBoard = () => {
-    board.forEach((box, idx) => {
-        if (box === 'X') {
+    board.forEach((cell, idx) => {  //using forEach method
+        if (cell === 'X') {
             squareEls[idx].textContent = 'X';
-        } else if (box === 'O') {
+        } else if (cell === 'O') {
             squareEls[idx].textContent = 'O';
         } else {
             squareEls[idx].textContent = ''; //Style that square however you wish, dependent on the value contained in the current cell being iterated over ('X', 'O', or ''). To keep it simple, start by just putting a letter in each square depending on the value of each cell.
         }
     });
 };
-
-console.log(updateBoard);
+updateBoard();
+init();
+// console.log(updateBoard);
 
 
 
