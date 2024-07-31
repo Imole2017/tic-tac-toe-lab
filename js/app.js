@@ -23,7 +23,7 @@
 
 //STEP 1
 //a. Use a variable named board to represent the state of the squares on the board.
-let board; //represents the state of the squares on the board
+let board //represents the state of the squares on the board
 let turn; // track whose turn it is
 let winner; // represents if anyone has won yet
 let tie; //represents if the game has ended in a tie
@@ -73,7 +73,8 @@ init();
 // b. Create a function called updateBoard.
 
 function render() {
-
+    // updateBoard();
+    // updateMessage();
 };
 
 
@@ -95,10 +96,26 @@ updateBoard();
 init();
 // console.log(updateBoard);
 
+// (d) Create a function called updateMessage
+// (e) In updateMessage, render a message based on the current game state:
+// If both winner and tie have a value of false (meaning the game is still in progress), render whose turn it is.
+// If winner is false, but tie is true, render a tie message.
+// Otherwise, render a congratulatory message to the player that has won.
 
+const updateMessage = () => {
+    if (winner === false && tie === false) {
+        messageEl.textContent = 'Player X, it is your turn!'
+    } else if (winner --- false && tie === true) {
+        messageEl.textContent = 'Tie, No Winners!'
+    } else {
+        messageEl.textContent = 'Congratulations! You Won!'
+    }
 
+}
 
+updateMessage();
 
+init();
 
 
 //5) Define the required constants.
