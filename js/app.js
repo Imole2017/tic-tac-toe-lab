@@ -55,10 +55,10 @@ const init = () => { // this is the intial setting for the 9 squares. ; MDN sour
 //d. Set the turn to X - this will represent player X.
 // e. Set the winner to false.
 // f. Set tie to false.
-    board = ['X', 'O', '', '', '', '', '', '', '',]; //9 squares 
+    board = ['X', 'O', '', '', '', '', '', '', '']; //9 squares 
     turn = 'X';
     winner = false;
-    tie = false;
+    tie = true;
     render();
   
 console.log('hello');
@@ -72,9 +72,11 @@ init();
 // a. Create a function called render, then set it aside for now.
 // b. Create a function called updateBoard.
 
-function render() {
-    // updateBoard();
-    // updateMessage();
+
+function   render() {
+   
+    `updateBoard()`;
+    `updateMessage()`;
 };
 
 
@@ -105,7 +107,7 @@ init();
 const updateMessage = () => {
     if (winner === false && tie === false) {
         messageEl.textContent = 'Player X, it is your turn!'
-    } else if (winner --- false && tie === true) {
+    } else if (winner === false && tie === true) {
         messageEl.textContent = 'Tie, No Winners!'
     } else {
         messageEl.textContent = 'Congratulations! You Won!'
@@ -117,9 +119,29 @@ updateMessage();
 
 init();
 
-
-//5) Define the required constants.
-
+// STEP 5
+// 5) Define the required constants.
+// a. In a constant called winningCombos, define the eight possible winning combinations as an array of arrays.
+const winningCombos = [ //will define nos horizontally, vertically, and diagonally
+    [0, 1, 2], // From left to right top row
+    [3, 4, 5], // From left to right middle row
+    [6, 7, 8], // From left to right bottom row
+    [0, 3, 6], // from top to bottom left row
+    [1, 4, 7], // from top to bottom middle row
+    [2, 5, 8], // from top to bottom right row
+    [0, 4, 8], // Diagonally, from top left corner to the bottom right corner 
+    [2, 4, 6], // Diagonally, from top right corner to the bottom left corner
+    // and so on if any!
+  ];
+  
+//STEP 6
 //6) Handle a player clicking a square with a `handleClick` function.
+//a. Create a function called handleClick. It will have an event parameter.
+// b. Attach an event listener to the game board using one of the two options below. The first option is the standard path, and the second is the Level Up path.
 
-//7) Create Reset functionality.
+const handleClick = (event) => {
+
+}
+
+
+// 7) Create Reset functionality.
